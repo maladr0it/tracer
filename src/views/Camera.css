@@ -1,4 +1,5 @@
 .Camera {
+<<<<<<< HEAD
   position: relative;
   height: 100%;
   display: flex;
@@ -12,4 +13,12 @@
   width: 100%;
   top: 0;
   left: 0;
+=======
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  /* background-color: rgba(255, 255, 255, 0.4); */
+>>>>>>> a35e0a949db7838d3c36c4575018d9d5e22b78d1
 }

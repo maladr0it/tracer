@@ -17,7 +17,7 @@ export const Controls = () => {
     <div>
       <h2>controls</h2>
       <div>
-        <label>width: </label>
+        <label>width:</label>
         <input
           type="range"
           name="width"
@@ -28,7 +28,7 @@ export const Controls = () => {
         />
       </div>
       <div>
-        <label>height: </label>
+        <label>height:</label>
         <input
           type="range"
           name="height"
@@ -39,7 +39,7 @@ export const Controls = () => {
         />
       </div>
       <div>
-        <label>font-size: </label>
+        <label>font-size:</label>
         <input
           type="range"
           name="fontSize"

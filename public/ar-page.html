@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <head>
+    <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script> -->
+    <script src="scripts/aframe.min.js"></script>
+    <script src="scripts/aframe-extras.loaders.min.js"></script>
+    <script src="scripts/aframe-ar.js"></script>
+  </head>
   <body style="margin : 0px; overflow: hidden;">
+    <style>
+      .a-enter-vr-button {
+        display: none;
+      }
+    </style>
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
       <a-marker preset="hiro">
-        <a-box position="0 1 0" material="color: blue;"> </a-box>
+        <a-plane
+          src="favicon.ico"
+          height="1"
+          width="1"
+          rotation="-90 0 0"
+          position="1, 0, 0"
+        ></a-plane>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+    <script>
+      const SCALE_FACTOR = 1 / 400;
+      const markerEl = document.querySelector("a-marker");
+
+      const updateImage = (url, height, width) => {
+        // remove
+        const planeEl = document.querySelector("a-plane");
+        planeEl.parentNode.removeChild(planeEl);
+        // add new
+        const newPlaneEl = document.createElement("a-plane");
+        newPlaneEl.setAttribute("src", url);
+        newPlaneEl.setAttribute("height", height * SCALE_FACTOR);
+        newPlaneEl.setAttribute("width", width * SCALE_FACTOR);
+        newPlaneEl.setAttribute("rotation", "-90 0 0");
+        newPlaneEl.setAttribute("position", "1 0 0");
+        markerEl.appendChild(newPlaneEl);
+      };
+
+      const handleImageURLChange = url => {
+        const IMAGE = new Image();
+        IMAGE.onload = () => {
+          updateImage(url, IMAGE.height, IMAGE.width);
+        };
+        IMAGE.src = url;
+      };
+
+      receiveMessage = event => {
+        const newImageURL = JSON.parse(event.data);
+        handleImageURLChange(newImageURL);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("message", receiveMessage, false);
+      });
+    </script>
   </body>
 </html>

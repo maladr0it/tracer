@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useMemo, useContext } from "react";
+import React, { createContext, useReducer, useContext } from "react";
 
 import { reducer, initialState } from "./reducer";
 
