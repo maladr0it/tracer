@@ -1,0 +1,14 @@
+.navbar {
+    background: linear-gradient(179.16deg, #FC71FF 4.41%, #B53CFF 95.6%), #FFB240;
+    padding: 10px;
+
+    justify-content: flex-end;
+}
+
+.navbar-selectors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}

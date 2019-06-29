@@ -1,16 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { Stage, Layer, Text, Rect } from "react-konva";
 
+import { useImageContext } from "../ImageContext/ImageContext";
+
 const BORDER_WIDTH = 4;
 const TEXT_MARGIN = 10;
 
-export const TextCanvas = ({ text, fontSize, width, height, onUpdate }) => {
+export const TextCanvas = () => {
   const stageRef = useRef(null);
+  const { state, dispatch } = useImageContext();
+  const { text, fontSize, width, height } = state;
 
   useEffect(() => {
-    const output = stageRef.current.getStage().toDataURL();
-    onUpdate(output);
-  }, [text, fontSize, width, height, onUpdate]);
+    const imageURL = stageRef.current.getStage().toDataURL();
+    dispatch({ type: "IMAGE_UPDATED", imageURL });
+  }, [text, fontSize, width, height, dispatch]);
 
   return (
     <Stage

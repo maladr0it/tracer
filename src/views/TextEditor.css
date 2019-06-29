@@ -1,0 +1,35 @@
+.textEditorContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.inputTaglineEditor {
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: center;
+  padding: 1rem;
+  color: #757575;
+}
+
+.textareaEditor {
+  font-family: Roboto;
+  font-size: 24px;
+
+  flex: 1;
+
+  color: #757575;
+  background: #ffffff;
+  border: 1px solid #aaa9a9;
+  border-radius: 4px;
+
+  resize: none;
+}
+
+.textareaEditor::placeholder {
+  color: #fed2ff;
+}
