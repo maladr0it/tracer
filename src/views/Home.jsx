@@ -9,7 +9,8 @@ export const Home = ({ history }) => {
   const [value, setValue] = useState(null);
   const { state, dispatch } = useImageContext();
 
-  const handleSubmit = () => {
+  const handleSubmit = e => {
+    e.preventDefault();
     history.push("/camera");
     dispatch({
       type: "TEXT_UPDATED",
