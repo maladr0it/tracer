@@ -5,11 +5,6 @@
   background-color: pink;
 }
 
-.Camera-viewport {
-  flex: 1;
-  background-color: grey;
-}
-
 .Camera-controls {
   position: fixed;
   bottom: 0;
