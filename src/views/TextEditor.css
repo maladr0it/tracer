@@ -1,7 +1,8 @@
 .textEditorContent {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  /* padding: 1rem; */
+  justify-content: flex-end;
 
   position: fixed;
   height: 100%;

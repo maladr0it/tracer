@@ -5,14 +5,32 @@ import "./TextEditor.css";
 import NavigationBar from "./NavigationBar";
 import MenuButton from "./MenuButton";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-
 export class TextEditor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: "menuButton"
+    };
+  }
+
   render() {
     return (
-      <div className="textEditorContent">
-        <MenuButton />
+      <div>
+        <div className="textEditorContent">
+          {this.state.display === "menuButton" ? (
+            <MenuButton
+              changeDisplay={() => {
+                this.setState({ display: "navbar" });
+              }}
+            />
+          ) : (
+            <NavigationBar
+              closeMenu={() => {
+                this.setState({ display: "menuButton" });
+              }}
+            />
+          )}
+        </div>
       </div>
     );
   }

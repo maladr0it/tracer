@@ -10,7 +10,7 @@ export default class MenuButton extends React.Component {
   render() {
     return (
       <div className="menuButtonContainer">
-        <button className="menuButton">
+        <button className="menuButton" onClick={this.props.changeDisplay}>
           <FontAwesomeIcon icon={faSlidersH} size="2x" />
         </button>
       </div>
