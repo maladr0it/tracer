@@ -1,16 +1,18 @@
 import React from "react";
 
-import { Editor } from "./components/Editor";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Home from "./Home";
+import Home from "./views/Home";
+import TextEditor from "./views/TextEditor";
+import Camera from "./views/Camera";
 
 function App() {
   return (
-    <div>
-      <h1>WELCOME TO THE APP</h1>
-      {/* <Editor /> */}
-      <Home />
-    </div>
+    <Router>
+      <Route path="/" exact component={Home} />
+      <Route path="/editor" component={TextEditor} />
+      <Route path="/camera" component={Camera} />
+    </Router>
   );
 }
 
