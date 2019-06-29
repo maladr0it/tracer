@@ -21,27 +21,45 @@
           height="1"
           width="1"
           rotation="-90 0 0"
+          position="1, 0, 0"
         ></a-plane>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
     <script>
+      const SCALE_FACTOR = 1 / 400;
       const markerEl = document.querySelector("a-marker");
 
-      const updateImage = () => {
-        // remove old
+      const updateImage = (url, height, width) => {
+        // remove
         const planeEl = document.querySelector("a-plane");
         planeEl.parentNode.removeChild(planeEl);
         // add new
         const newPlaneEl = document.createElement("a-plane");
-        newPlaneEl.setAttribute("src", "arrow-double.png");
-
+        newPlaneEl.setAttribute("src", url);
+        newPlaneEl.setAttribute("height", height * SCALE_FACTOR);
+        newPlaneEl.setAttribute("width", width * SCALE_FACTOR);
+        newPlaneEl.setAttribute("rotation", "-90 0 0");
+        newPlaneEl.setAttribute("position", "1 0 0");
         markerEl.appendChild(newPlaneEl);
       };
 
-      setTimeout(() => {
-        updateImage();
-      }, 10000);
+      const handleImageURLChange = url => {
+        const IMAGE = new Image();
+        IMAGE.onload = () => {
+          updateImage(url, IMAGE.height, IMAGE.width);
+        };
+        IMAGE.src = url;
+      };
+
+      receiveMessage = event => {
+        const newImageURL = JSON.parse(event.data);
+        handleImageURLChange(newImageURL);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("message", receiveMessage, false);
+      });
     </script>
   </body>
 </html>
