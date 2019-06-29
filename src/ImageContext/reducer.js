@@ -15,6 +15,13 @@ export const reducer = (state, action) => {
         text
       };
     }
+    case "CANVAS_UPDATED": {
+      const { property, value } = action;
+      return {
+        ...state,
+        [property]: value
+      };
+    }
     case "IMAGE_UPDATED": {
       const { imageURL } = action;
       return {
@@ -22,7 +29,6 @@ export const reducer = (state, action) => {
         imageURL
       };
     }
-
     default:
       return state;
   }

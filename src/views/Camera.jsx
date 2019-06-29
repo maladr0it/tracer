@@ -16,13 +16,16 @@ export const Camera = () => {
 
   return (
     <div className="Camera">
-      <h1>THIS IS THE CAMERA</h1>
-      <div className="Camera-viewport">
-        <TextCanvas />
+      {/* <iframe
+        title="camera-viewport"
+        className="Camera-viewport"
+        src="ar-page.html"
+      /> */}
+      <div className="Camera-controls">
         <TextImage imageURL={imageURL} />
+        <TextCanvas />
+        <Controls />
       </div>
-      <Controls />
-      <div>NAV_BAR</div>
     </div>
   );
 };
