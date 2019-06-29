@@ -1,30 +1,3 @@
-// import React, { useEffect } from 'react';
-// import ReactDOM from 'react-dom';
-
-// const modalRoot = document.querySelector('body');
-
-// function CameraRoot(props) {
-//   const el = document.createElement('a-scene');
-//   el.setAttribute('embedded', '');
-//   el.setAttribute('arjs', '');
-
-//   useEffect(() => {
-//     modalRoot.prepend(el);
-//     return () => modalRoot.removeChild(el);
-//   }, []);
-
-//   const children = (
-//     <>
-//       <a-marker preset='hiro'>
-//         <a-box position='0 0.5 0' material='color: yellow;' />
-//       </a-marker>
-//       <a-entity camera />
-//     </>
-//   );
-
-//   return ReactDOM.createPortal(children, el);
-// }
-
 // export default CameraRoot;
 // MOCK camera to test output
 
@@ -57,3 +30,32 @@ export const Camera = () => {
     </div>
   );
 };
+
+// import React, { useRef } from 'react';
+
+// export const Camera = () => {
+//   const cameraFrame = useRef(null);
+//   const position = { x: 0, y: 50 };
+//   return (
+//     <div>
+//       <iframe
+//         ref={cameraFrame}
+//         src="texture_demo.html"
+//         width="1000"
+//         height="700"
+//         frameBorder="0"
+//       />
+//       <div>
+//         <button
+//           onClick={() => {
+//             cameraFrame.current.contentWindow.postMessage(
+//               JSON.stringify(position)
+//             );
+//           }}
+//         >
+//           change position
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };

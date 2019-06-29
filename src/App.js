@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import "./App.css";
-import { Home } from "./views/Home";
-import { TextEditor } from "./views/TextEditor";
-import { Camera } from "./views/Camera";
-import { ImageContextProvider } from "./ImageContext/ImageContext";
-import { Viewfinder } from "./views/Viewfinder";
+import './App.css';
+import { Home } from './views/Home';
+import { TextEditor } from './views/TextEditor';
+import { Camera } from './views/Camera';
+import { ImageContextProvider } from './ImageContext/ImageContext';
+import { Viewfinder } from './views/Viewfinder';
 
 const App = () => {
   return (
