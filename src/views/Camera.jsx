@@ -17,6 +17,7 @@ export const Camera = () => {
   return (
     <div className="Camera">
       <h1>THIS IS THE CAMERA</h1>
+      <iframe src="ar-page.html" />
       <div className="Camera-viewport">
         <TextCanvas />
         <TextImage imageURL={imageURL} />
