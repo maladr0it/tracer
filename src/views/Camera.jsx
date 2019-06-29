@@ -17,11 +17,15 @@ export const Camera = () => {
   return (
     <div className="Camera">
       <h1>THIS IS THE CAMERA</h1>
-      <iframe src="ar-page.html" />
-      <div className="Camera-viewport">
+      <iframe
+        title="camera-viewport"
+        className="Camera-viewport"
+        src="ar-page.html"
+      />
+      {/* <div className="Camera-viewport">
         <TextCanvas />
         <TextImage imageURL={imageURL} />
-      </div>
+      </div> */}
       <Controls />
       <div>NAV_BAR</div>
     </div>
