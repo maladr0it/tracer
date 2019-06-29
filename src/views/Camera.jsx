@@ -30,32 +30,3 @@ export const Camera = () => {
     </div>
   );
 };
-
-// import React, { useRef } from 'react';
-
-// export const Camera = () => {
-//   const cameraFrame = useRef(null);
-//   const position = { x: 0, y: 50 };
-//   return (
-//     <div>
-//       <iframe
-//         ref={cameraFrame}
-//         src="texture_demo.html"
-//         width="1000"
-//         height="700"
-//         frameBorder="0"
-//       />
-//       <div>
-//         <button
-//           onClick={() => {
-//             cameraFrame.current.contentWindow.postMessage(
-//               JSON.stringify(position)
-//             );
-//           }}
-//         >
-//           change position
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };

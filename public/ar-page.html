@@ -13,27 +13,37 @@
           height="1"
           width="1"
           rotation="-90 0 0"
+          position="1, 0, 0"
         ></a-plane>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
     <script>
-      const markerEl = document.querySelector("a-marker");
+      const markerEl = document.querySelector('a-marker');
+      console.log(document.querySelector('a-plane').isObject3D);
 
-      const updateImage = () => {
+      receiveMessage = event => {
+        const newImageURL = JSON.parse(event.data);
+        updateImage(newImageURL);
+      };
+
+      const updateImage = newImageURL => {
         // remove old
-        const planeEl = document.querySelector("a-plane");
+        const planeEl = document.querySelector('a-plane');
         planeEl.parentNode.removeChild(planeEl);
         // add new
-        const newPlaneEl = document.createElement("a-plane");
-        newPlaneEl.setAttribute("src", "arrow-double.png");
-
+        const newPlaneEl = document.createElement('a-plane');
+        newPlaneEl.setAttribute('src', newImageURL);
+        newPlaneEl.setAttribute('height', '1');
+        newPlaneEl.setAttribute('width', '1');
+        newPlaneEl.setAttribute('rotation', '-90 0 0');
+        newPlaneEl.setAttribute('position', '1 0 0');
         markerEl.appendChild(newPlaneEl);
       };
 
-      setTimeout(() => {
-        updateImage();
-      }, 10000);
+      document.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('message', receiveMessage, false);
+      });
     </script>
   </body>
 </html>
