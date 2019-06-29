@@ -9,7 +9,7 @@ const TEXT_MARGIN = 10;
 export const TextCanvas = () => {
   const stageRef = useRef(null);
   const { state, dispatch } = useImageContext();
-  const { text, fontSize, width, height, onUpdate } = state;
+  const { text, fontSize, width, height } = state;
 
   useEffect(() => {
     const imageURL = stageRef.current.getStage().toDataURL();
@@ -19,7 +19,7 @@ export const TextCanvas = () => {
   return (
     <Stage
       ref={stageRef}
-      // style={{ display: "none" }}
+      style={{ display: "none" }}
       width={width}
       height={height}
     >

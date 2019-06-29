@@ -11,7 +11,10 @@ export const Home = ({ history }) => {
 
   const handleSubmit = () => {
     history.push("/camera");
-    dispatch({ type: "TEXT_UPDATED", text: value === null ? "" : value });
+    dispatch({
+      type: "TEXT_UPDATED",
+      text: value === null ? state.text : value
+    });
   };
 
   return (
