@@ -5,15 +5,12 @@ import { useImageContext } from "../ImageContext/ImageContext";
 import "./Viewfinder.css";
 
 export const Viewfinder = withRouter(({ location }) => {
+  const cameraFrame = useRef(null);
   const { state } = useImageContext();
   const { imageURL } = state;
-
   const cameraActive = location.pathname === "/camera";
-
-  const cameraFrame = useRef(null);
-
   useEffect(() => {
-    cameraFrame.current.contentWindow.postMessage(JSON.stringify(imageURL));
+    cameraFrame.current.contentWindow.postMessage(imageURL);
   }, [imageURL]);
 
   return (
