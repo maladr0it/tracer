@@ -20,8 +20,7 @@ export const Home = ({ history }) => {
     history.push("/camera");
     dispatch({
       type: "TEXT_UPDATED",
-      text: value === null ? state.text : value,
-      view: "selectors"
+      text: value === null ? state.text : value
     });
   };
 
@@ -71,19 +70,34 @@ export const Home = ({ history }) => {
       ) : (
         <div>
           <ul className="Home-kanjiList">
-            <li>
+            <li
+              value={value === null ? state.text : value}
+              onClick={() => setValue("日")}
+            >
               <img src={Nichi} />
             </li>
-            <li>
+            <li
+              value={value === null ? state.text : value}
+              onClick={() => setValue("大")}
+            >
               <img src={Dai} />
             </li>
-            <li>
+            <li
+              value={value === null ? state.text : value}
+              onClick={() => setValue("中")}
+            >
               <img src={Chuu} />
             </li>
-            <li>
+            <li
+              value={value === null ? state.text : value}
+              onClick={() => setValue("本")}
+            >
               <img src={Hon} />
             </li>
-            <li>
+            <li
+              value={value === null ? state.text : value}
+              onClick={() => setValue("行")}
+            >
               <img src={Iku} />
             </li>
           </ul>
