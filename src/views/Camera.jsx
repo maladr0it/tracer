@@ -1,14 +1,11 @@
-// MOCK camera to test output
-
-// first, let's render the text
-
 import React from "react";
 
 import "./Camera.css";
 import { useImageContext } from "../ImageContext/ImageContext";
 import { TextCanvas } from "../components/TextCanvas";
 import { TextImage } from "../components/TextImage";
-import { Controls } from "../components/Controls";
+import { MenuButton } from "../components/MenuButton";
+// import { Controls } from "../components/Controls";
 
 export const Camera = () => {
   const { state } = useImageContext();
@@ -16,11 +13,9 @@ export const Camera = () => {
 
   return (
     <div className="Camera">
-      <div className="Camera-controls">
-        <TextImage imageURL={imageURL} />
-        <TextCanvas />
-        <Controls />
-      </div>
+      {/* <TextImage imageURL={imageURL} /> */}
+      <TextCanvas />
+      <MenuButton onClick={() => console.log("hi")} />
     </div>
   );
 };

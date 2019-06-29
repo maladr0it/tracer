@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script> -->
     <script src="scripts/aframe.min.js"></script>
     <script src="scripts/aframe-extras.loaders.min.js"></script>
     <script src="scripts/aframe-ar.js"></script>
   </head>
   <body style="margin : 0px; overflow: hidden;">
+    <style>
+      .a-enter-vr-button {
+        display: none;
+      }
+    </style>
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
       <a-marker preset="hiro">
         <a-plane
