@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  </head>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
-      <a-assets>
-        <img id="ground" src="favicon.ico" />
-      </a-assets>
       <a-marker preset="hiro">
-        <!-- Basic plane. -->
-        <a-plane color="#CCC" height="0" width="0"></a-plane>
-
-        <!-- Textured plane parallel to ground. -->
         <a-plane
-          src="#ground"
+          src="favicon.ico"
           height="1"
           width="1"
           rotation="-90 0 0"
         ></a-plane>
-        <!-- <a-box position="0 1 0" material="color: blue;"> </a-box> -->
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+    <script>
+      const markerEl = document.querySelector("a-marker");
+
+      const updateImage = () => {
+        // remove old
+        const planeEl = document.querySelector("a-plane");
+        planeEl.parentNode.removeChild(planeEl);
+        // add new
+        const newPlaneEl = document.createElement("a-plane");
+        newPlaneEl.setAttribute("src", "arrow-double.png");
+
+        markerEl.appendChild(newPlaneEl);
+      };
+
+      setTimeout(() => {
+        updateImage();
+      }, 10000);
+    </script>
   </body>
 </html>
