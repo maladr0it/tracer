@@ -1,0 +1,11 @@
+.Camera {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+}
+
+.Camera-viewport {
+  flex: 1;
+  background-color: grey;
+}

@@ -1,31 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-import "./Home.css";
-
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
-export default class Home extends React.Component {
-  render() {
-    return (
-      <div className="homeContent">
-        <p className="title">ペン字の なぞり書き</p>
-        <p className="tagline">憧れの美文字へ</p>
-        <p className="inputTagline">
-          <FontAwesomeIcon icon={faPencilAlt} />
-          希望な文章を入力ください
-        </p>
+import "./Home.css";
+import { useImageContext } from "../ImageContext/ImageContext";
+
+export const Home = ({ history }) => {
+  const [value, setValue] = useState(null);
+  const { state, dispatch } = useImageContext();
+
+  const handleSubmit = () => {
+    history.push("/camera");
+    dispatch({ type: "TEXT_UPDATED", text: value === null ? "" : value });
+  };
+
+  return (
+    <div className="Home">
+      <h1 className="Home-title">ペン字の なぞり書き</h1>
+      <p className="Home-tagline">憧れの美文字へ</p>
+      <p className="Home-formTagline">
+        <FontAwesomeIcon icon={faPencilAlt} />
+        希望な文章を入力ください
+      </p>
+      <form className="Home-form" onSubmit={handleSubmit}>
         <textarea
+          className="Home-textarea"
           type="text"
-          rows="10"
-          wrap="hard"
+          value={value === null ? state.text : value}
+          onChange={e => setValue(e.target.value)}
           placeholder="この文章はダミーです。"
         />
-        <button className="startButton">スタート</button>
-
-        <Link to="/editor">EDITOR</Link>
-      </div>
-    );
-  }
-}
+        <button className="Home-startButton">スタート</button>
+      </form>
+    </div>
+  );
+};
