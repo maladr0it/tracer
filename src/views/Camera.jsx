@@ -11,16 +11,11 @@ import { TextImage } from "../components/TextImage";
 import { Controls } from "../components/Controls";
 
 export const Camera = () => {
-  const { state, dispatch } = useImageContext();
+  const { state } = useImageContext();
   const { imageURL } = state;
 
   return (
     <div className="Camera">
-      {/* <iframe
-        title="camera-viewport"
-        className="Camera-viewport"
-        src="ar-page.html"
-      /> */}
       <div className="Camera-controls">
         <TextImage imageURL={imageURL} />
         <TextCanvas />
