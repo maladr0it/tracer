@@ -48,3 +48,33 @@
   background-color: #fff;
   color: #b53cff;
 }
+
+.Home-selectors {
+  font-size: 2rem;
+  background-color: #fff;
+  color: #b53cff;
+  margin: 2rem;
+  border-radius: 4px;
+}
+
+.Home-kanjiList {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.Home-kanjiList img {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem;
+}
+
+.Home-returnButton {
+  font-size: 2rem;
+  /* color: #b53cff; */
+  margin: 1rem;
+}

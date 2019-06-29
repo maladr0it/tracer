@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPencilAlt,
   faArrowsAlt,
-  faSlidersH,
-  faSync,
   faTextHeight,
   faExpand,
   faPalette,
