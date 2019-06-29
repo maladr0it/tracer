@@ -16,7 +16,6 @@ export const Camera = () => {
 
   return (
     <div className="Camera">
-      <h1>THIS IS THE CAMERA</h1>
       <iframe
         title="camera-viewport"
         className="Camera-viewport"
@@ -26,8 +25,7 @@ export const Camera = () => {
         <TextCanvas />
         <TextImage imageURL={imageURL} />
       </div> */}
-      <Controls />
-      <div>NAV_BAR</div>
+      {/* <Controls /> */}
     </div>
   );
 };

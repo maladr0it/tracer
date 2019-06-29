@@ -1,4 +1,5 @@
 .Camera {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -6,6 +7,9 @@
 }
 
 .Camera-viewport {
-  flex: 1;
-  background-color: grey;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
