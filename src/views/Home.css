@@ -1,110 +1,80 @@
 .homeContent {
-    position: relative;
-    width: 375px;
-    height: 667px;
+  position: relative;
+  width: 375px;
+  height: 667px;
 
-    background: linear-gradient(180deg, #FC71FF 57.29%, #B53CFF 100%), #FFB240;
+  background: linear-gradient(180deg, #fc71ff 57.29%, #b53cff 100%), #ffb240;
 }
 
 .title {
-    position: absolute;
-    width: 351px;
-    height: 126px;
-    left: 12px;
-    top: 0px;
+  position: absolute;
+  width: 351px;
+  height: 126px;
+  left: 12px;
+  top: 0px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-size: 64px;
-    line-height: 75px;
-    text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .tagline {
-    position: absolute;
-    width: 265px;
-    height: 50px;
-    left: 55px;
-    top: 175px;
+  position: absolute;
+  width: 265px;
+  height: 50px;
+  left: 55px;
+  top: 175px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
 
-    color: #FED2FF;
+  color: #fed2ff;
 }
 
 .startButton {
-    position: absolute;
-    width: 231px;
-    height: 57px;
-    left: 72px;
-    top: 544px;
+  position: absolute;
+  width: 231px;
+  height: 57px;
+  left: 72px;
+  top: 544px;
 
-    background: #FFFFFF;
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    
-    color: #B53CFF;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+
+  color: #b53cff;
 }
 
 .inputTagline {
-    position: absolute;
-    /* width: 294px; */
-    height: 59px;
-    left: 30px;
-    top: 260px;
+  position: absolute;
+  /* width: 294px; */
+  height: 59px;
+  left: 30px;
+  top: 260px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    wrap: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
 
-    color: #757575;
-}
-
-textarea {
-    position: absolute;
-    width: 328px;
-    height: 200px;
-    top: 320px;
-    left: 22px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-
-    /* color: #757575; */
-    color: #FFFFFF;
-    /* background: #FFFFFF; */
-    background: none;
-    /* border: 1px solid #AAA9A9; */
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 3px;
-
-    resize: none;
-}
-
-textarea::placeholder {
-    color: #FED2FF;
+  color: #757575;
 }
