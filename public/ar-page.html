@@ -22,19 +22,21 @@
     </a-scene>
     <script>
       const SCALE_FACTOR = 1 / 400;
-      const markerEl = document.querySelector("a-marker");
+      const markerEl = document.querySelector('a-marker');
 
       const updateImage = (url, height, width) => {
         // remove
-        const planeEl = document.querySelector("a-plane");
-        planeEl.parentNode.removeChild(planeEl);
+        const planeEl = document.querySelector('a-plane');
+        if (planeEl) {
+          planeEl.parentNode.removeChild(planeEl);
+        }
         // add new
-        const newPlaneEl = document.createElement("a-plane");
-        newPlaneEl.setAttribute("src", url);
-        newPlaneEl.setAttribute("height", height * SCALE_FACTOR);
-        newPlaneEl.setAttribute("width", width * SCALE_FACTOR);
-        newPlaneEl.setAttribute("rotation", "-90 0 0");
-        newPlaneEl.setAttribute("position", "1 0 0");
+        const newPlaneEl = document.createElement('a-plane');
+        newPlaneEl.setAttribute('src', url);
+        newPlaneEl.setAttribute('height', height * SCALE_FACTOR);
+        newPlaneEl.setAttribute('width', width * SCALE_FACTOR);
+        newPlaneEl.setAttribute('rotation', '-90 0 0');
+        newPlaneEl.setAttribute('position', '1 0 0');
         markerEl.appendChild(newPlaneEl);
       };
 
@@ -51,8 +53,8 @@
         handleImageURLChange(newImageURL);
       };
 
-      document.addEventListener("DOMContentLoaded", () => {
-        window.addEventListener("message", receiveMessage, false);
+      document.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('message', receiveMessage, false);
       });
     </script>
   </body>
