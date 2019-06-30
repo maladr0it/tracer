@@ -1,8 +1,9 @@
 import React from "react";
 
+import "./Controls.css";
 import { useImageContext } from "../ImageContext/ImageContext";
 
-export const Controls = () => {
+export const Controls = ({ onClose }) => {
   const { state, dispatch } = useImageContext();
   const { height, width, fontSize } = state;
 
@@ -15,7 +16,10 @@ export const Controls = () => {
 
   return (
     <div>
-      <h2>controls</h2>
+      <div className="Controls-topBar">
+        <h2>controls</h2>
+        <button onClick={onClose}>x</button>
+      </div>
       <div>
         <label>width:</label>
         <input
