@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import "./KanjiPractice.css";
-import Nichi from "../assets/kanji/nichi-4.png";
-import Dai from "../assets/kanji/dai-3.png";
-import Hon from "../assets/kanji/hon-5.png";
-import Iku from "../assets/kanji/iku-6.png";
-import Chuu from "../assets/kanji/chuu-4.png";
+import Nichi from "../assets/Kanji/nichi-4.png";
+import Dai from "../assets/Kanji/dai-3.png";
+import Hon from "../assets/Kanji/hon-5.png";
+import Iku from "../assets/Kanji/iku-6.png";
+import Chuu from "../assets/Kanji/chuu-4.png";
 import { Home } from "../components/Home";
 
 const IMAGES = [Nichi, Dai, Hon, Iku, Chuu];
