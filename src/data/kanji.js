@@ -25,12 +25,27 @@ import chuu2 from "../assets/kanji/chuu-2.png";
 import chuu3 from "../assets/kanji/chuu-3.png";
 import chuu4 from "../assets/kanji/chuu-4.png";
 
-export const nichi = [nichi1, nichi2, nichi3, nichi4];
+export const nichi = {
+  name: "日",
+  images: [nichi1, nichi2, nichi3, nichi4]
+};
 
-export const dai = [dai1, dai2, dai3];
+export const dai = {
+  name: "大",
+  images: [dai1, dai2, dai3]
+};
 
-export const hon = [hon1, hon2, hon3, hon4, hon5];
+export const hon = {
+  name: "本",
+  images: [hon1, hon2, hon3, hon4, hon5]
+};
 
-export const iku = [iku1, iku2, iku3, iku4, iku5, iku6];
+export const iku = {
+  name: "行",
+  images: [iku1, iku2, iku3, iku4, iku5, iku6]
+};
 
-export const chuu = [chuu1, chuu2, chuu3, chuu4];
+export const chuu = {
+  name: "中",
+  images: [chuu1, chuu2, chuu3, chuu4]
+};
