@@ -10,15 +10,13 @@ export const Camera = () => {
   const { state } = useImageContext();
   const [controlsOpen, setControlsOpen] = useState(false);
 
-  const toggleControls = () => {
-    setControlsOpen(prev => !prev);
-  };
-
   return (
     <div className="Camera">
       <TextCanvas />
-      <MenuButton onClick={toggleControls} />
-      <div className="Camera-controls">{controlsOpen && <Controls />}</div>
+      <MenuButton onClick={() => setControlsOpen(true)} />
+      <div className="Camera-controls">
+        {controlsOpen && <Controls onClose={() => setControlsOpen(false)} />}
+      </div>
     </div>
   );
 };

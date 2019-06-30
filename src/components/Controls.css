@@ -1,6 +1,7 @@
 .Controls-topBar {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .Controls-closeButton {

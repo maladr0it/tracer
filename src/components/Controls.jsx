@@ -17,8 +17,9 @@ export const Controls = ({ onClose }) => {
   return (
     <div>
       <div className="Controls-topBar">
-        <h2>controls</h2>
-        <button onClick={onClose}>x</button>
+        <button className="Controls-closeButton" onClick={onClose}>
+          x
+        </button>
       </div>
       <div>
         <label>width:</label>
