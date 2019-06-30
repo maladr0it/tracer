@@ -15,13 +15,10 @@ export const Camera = () => {
   };
 
   return (
-    <>
+    <div className="Camera">
+      <TextCanvas />
       <MenuButton onClick={toggleControls} />
-      <div className="Camera">
-        {/* <TextImage imageURL={imageURL} /> */}
-        <TextCanvas />
-        {controlsOpen && <Controls />}
-      </div>
-    </>
+      <div className="Camera-controls">{controlsOpen && <Controls />}</div>
+    </div>
   );
 };

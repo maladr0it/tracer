@@ -1,8 +1,13 @@
 .Camera {
   position: fixed;
   z-index: 100;
-  bottom: 0;
+  height: 100%;
   width: 100%;
-  background-color: #fff;
-  /* background-color: rgba(255, 255, 255, 0.4); */
+}
+
+.Camera-controls {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
 }

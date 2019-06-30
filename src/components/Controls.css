@@ -1,2 +1,9 @@
-.Controls {
+.Controls-topBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Controls-closeButton {
+  border: none;
+  background: none;
 }
