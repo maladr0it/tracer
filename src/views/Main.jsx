@@ -12,7 +12,7 @@ export const Main = () => {
           エディター
         </Link>
         <Link className="Main-button" to="/kanji">
-          漢字
+          漢字練習
         </Link>
       </div>
     </Home>

@@ -1,52 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
+import "./KanjiPractice.css";
+import Nichi from "../assets/kanji/nichi-4.png";
+import Dai from "../assets/kanji/dai-3.png";
+import Hon from "../assets/kanji/hon-5.png";
+import Iku from "../assets/kanji/iku-6.png";
+import Chuu from "../assets/kanji/chuu-4.png";
 import { Home } from "../components/Home";
+
+const IMAGES = [Nichi, Dai, Hon, Iku, Chuu];
+
+const CHAR_MAP = {
+  Nichi: "日",
+  Dai: "大",
+  Hon: "本",
+  Iku: "行",
+  Chu: "中"
+};
 
 export const KanjiPractice = () => {
   return (
     <Home>
-      <h1>KANJI_PRACTICE</h1>
+      <div className="KanjiPractice-list">
+        {IMAGES.map(image => (
+          <img
+            className="KanjiPractice-image"
+            src={image}
+            alt="kanji-character"
+          />
+        ))}
+      </div>
+      <Link to="/" className="KanjiPractice-backButton">
+        <FontAwesomeIcon icon={faAngleLeft} size="3x" />
+      </Link>
     </Home>
   );
 };
-
-// <div>
-//   <ul className="Home-kanjiList">
-//     <li
-//       value={value === null ? state.text : value}
-//       onClick={() => setValue("日")}
-//     >
-//       <img src={Nichi} />
-//     </li>
-//     <li
-//       value={value === null ? state.text : value}
-//       onClick={() => setValue("大")}
-//     >
-//       <img src={Dai} />
-//     </li>
-//     <li
-//       value={value === null ? state.text : value}
-//       onClick={() => setValue("中")}
-//     >
-//       <img src={Chuu} />
-//     </li>
-//     <li
-//       value={value === null ? state.text : value}
-//       onClick={() => setValue("本")}
-//     >
-//       <img src={Hon} />
-//     </li>
-//     <li
-//       value={value === null ? state.text : value}
-//       onClick={() => setValue("行")}
-//     >
-//       <img src={Iku} />
-//     </li>
-//   </ul>
-//   <button
-//     className="Home-returnButton"
-//     onClick={() => setView("selectors")}
-//   >
-//     <FontAwesomeIcon icon={faAngleLeft} size="3x" />
-//   </button>
-// </div>

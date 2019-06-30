@@ -1,21 +1,26 @@
-.KanjiPractice {
-  list-style: none;
-  width: 100%;
+/* .KanjiPractice- */
+
+.KanjiPractice-list {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
+  list-style: none;
   padding: 0;
   flex-wrap: wrap;
+  flex: 1;
 }
 
-.KanjiPractice-img {
+.KanjiPractice-image {
   width: 4rem;
   height: 4rem;
   margin: 1rem;
 }
 
-.KanjiPractice-returnButton {
-  font-size: 2rem;
-  /* color: #b53cff; */
-  margin: 1rem;
+.KanjiPractice-backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #b53cff;
+  text-decoration: none;
 }

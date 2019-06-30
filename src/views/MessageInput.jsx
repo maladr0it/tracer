@@ -9,7 +9,6 @@ import { Home } from "../components/Home";
 
 export const MessageInput = ({ history }) => {
   const [value, setValue] = useState(null);
-  // const [view, setView] = useState("selectors");
   const { state, dispatch } = useImageContext();
 
   const handleSubmit = e => {
@@ -42,12 +41,6 @@ export const MessageInput = ({ history }) => {
           <button className="MessageInput-startButton">スタート</button>
         </div>
       </form>
-      {/* <button
-        className="Home-returnButton"
-        onClick={() => setView("selectors")}
-      >
-        <FontAwesomeIcon icon={faAngleLeft} size="3x" />
-      </button> */}
     </Home>
   );
 };
