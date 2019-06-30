@@ -3,7 +3,7 @@ import { Stage, Layer, Text, Rect } from 'react-konva';
 
 import { useImageContext } from '../ImageContext/ImageContext';
 
-const BORDER_WIDTH = 4;
+const BORDER_WIDTH = 25;
 const TEXT_MARGIN = 10;
 
 export const TextCanvas = () => {
