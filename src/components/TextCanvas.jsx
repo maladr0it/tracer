@@ -38,6 +38,7 @@ export const TextCanvas = () => {
           height={height - 2 * TEXT_MARGIN}
           text={text}
           opacity={0.3}
+          fontFamily="azuki"
         />
       </Layer>
     </Stage>
