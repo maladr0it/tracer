@@ -5,9 +5,19 @@
   width: 100%;
 }
 
+.Camera-backButton {
+  top: 1rem;
+  left: 1rem;
+}
+
+.Camera-controlsButton {
+  bottom: 1rem;
+  right: 1rem;
+}
+
 .Camera-controls {
   position: fixed;
   width: 100%;
   bottom: 0;
-  background: #fff;
+  background-color: #fff;
 }
