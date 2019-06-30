@@ -1,0 +1,19 @@
+.navbar {
+  background: linear-gradient(179.16deg, #fc71ff 4.41%, #b53cff 95.6%), #ffb240;
+  padding: 10px;
+
+  /* justify-content: flex-end; */
+}
+
+.navbar-selectors {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navbar-selectors::li {
+  padding-inline: 1rem;
+}

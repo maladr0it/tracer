@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
-import { Home } from "./views/Home";
+import { Main } from "./views/Main";
+import { MessageInput } from "./views/MessageInput";
 import { Camera } from "./views/Camera";
 import { ImageContextProvider } from "./ImageContext/ImageContext";
+import { KanjiPractice } from "./views/KanjiPractice";
 import { Viewfinder } from "./views/Viewfinder";
 
 const App = () => {
@@ -13,7 +15,9 @@ const App = () => {
     <div className="App">
       <Router>
         <ImageContextProvider>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Main} />
+          <Route path="/editor" component={MessageInput} />
+          <Route path="/kanji" component={KanjiPractice} />
           <Route path="/camera" component={Camera} />
           <Viewfinder />
         </ImageContextProvider>

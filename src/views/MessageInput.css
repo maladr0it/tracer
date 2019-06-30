@@ -1,0 +1,46 @@
+.MessageInput-title {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #757575;
+}
+
+.MessageInput-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.MessageInput-textarea {
+  flex: 1;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: none;
+  font-family: Roboto;
+  resize: none;
+}
+
+.MessageInput-buttonBar {
+  display: flex;
+}
+
+.MessageInput-buttonBar > * {
+  flex: 1;
+}
+
+.MessageInput-backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  background-color: #fff;
+  color: #b53cff;
+}
+
+.MessageInput-startButton {
+  border: none;
+  font-size: 2rem;
+  background-color: #fff;
+  color: #b53cff;
+}

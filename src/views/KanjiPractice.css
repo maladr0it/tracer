@@ -1,0 +1,21 @@
+.KanjiPractice {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.KanjiPractice-img {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem;
+}
+
+.KanjiPractice-returnButton {
+  font-size: 2rem;
+  /* color: #b53cff; */
+  margin: 1rem;
+}
