@@ -23,35 +23,35 @@ export const Controls = ({ onClose }) => {
       </div>
       <div className="Controls-inputGroup">
         <div className="Controls-inputContainer">
-          <label>WIDTH</label>
+          <label>Width</label>
           <input
             type="range"
             name="width"
             value={width}
-            min={256}
-            max={1024}
+            min={512}
+            max={4096}
             onChange={setRange}
           />
         </div>
         <div className="Controls-inputContainer">
-          <label>HEIGHT</label>
+          <label>Height</label>
           <input
             type="range"
             name="height"
             value={height}
-            min={256}
-            max={1024}
+            min={512}
+            max={4096}
             onChange={setRange}
           />
         </div>
         <div className="Controls-inputContainer">
-          <label>FONT</label>
+          <label>Font</label>
           <input
             type="range"
             name="fontSize"
             value={fontSize}
-            min={50}
-            max={500}
+            min={256}
+            max={1024}
             onChange={setRange}
           />
         </div>

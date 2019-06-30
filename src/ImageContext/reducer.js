@@ -1,8 +1,8 @@
 export const initialState = {
   text: "",
-  width: 400,
-  height: 400,
-  fontSize: 100,
+  width: 2048,
+  height: 1024,
+  fontSize: 512,
   imageURL: null
 };
 

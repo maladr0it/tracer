@@ -25,11 +25,12 @@ export const KanjiPractice = ({ history }) => {
       type: "TEXT_UPDATED",
       text
     });
-    dispatch({
-      type: "CANVAS_UPDATED",
-      property: "fontSize",
-      value: 500
-    });
+    // make sufficiently large, it is practice
+    // dispatch({
+    //   type: "CANVAS_UPDATED",
+    //   property: "fontSize",
+    //   value: 500
+    // });
     history.push("/camera");
   };
 
