@@ -19,12 +19,14 @@ export const Camera = ({ history }) => {
       >
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
       </FloatingButton>
-      <FloatingButton
-        className="Camera-controlsButton"
-        onClick={() => setControlsOpen(true)}
-      >
-        <FontAwesomeIcon icon={faSlidersH} size="2x" />
-      </FloatingButton>
+      {!controlsOpen && (
+        <FloatingButton
+          className="Camera-controlsButton"
+          onClick={() => setControlsOpen(true)}
+        >
+          <FontAwesomeIcon icon={faSlidersH} size="2x" />
+        </FloatingButton>
+      )}
       <div className="Camera-controls">
         {controlsOpen && <Controls onClose={() => setControlsOpen(false)} />}
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 
 import "./Controls.css";
 import { useImageContext } from "../ImageContext/ImageContext";
@@ -16,44 +15,46 @@ export const Controls = ({ onClose }) => {
   };
 
   return (
-    <div>
+    <div className="Controls">
       <div className="Controls-topBar">
         <button className="Controls-closeButton" onClick={onClose}>
           x
         </button>
       </div>
-      <div>
-        <label>width:</label>
-        <input
-          type="range"
-          name="width"
-          value={width}
-          min={256}
-          max={1024}
-          onChange={setRange}
-        />
-      </div>
-      <div>
-        <label>height:</label>
-        <input
-          type="range"
-          name="height"
-          value={height}
-          min={256}
-          max={1024}
-          onChange={setRange}
-        />
-      </div>
-      <div>
-        <label>font-size:</label>
-        <input
-          type="range"
-          name="fontSize"
-          value={fontSize}
-          min={50}
-          max={500}
-          onChange={setRange}
-        />
+      <div className="Controls-inputGroup">
+        <div className="Controls-inputContainer">
+          <label>WIDTH</label>
+          <input
+            type="range"
+            name="width"
+            value={width}
+            min={256}
+            max={1024}
+            onChange={setRange}
+          />
+        </div>
+        <div className="Controls-inputContainer">
+          <label>HEIGHT</label>
+          <input
+            type="range"
+            name="height"
+            value={height}
+            min={256}
+            max={1024}
+            onChange={setRange}
+          />
+        </div>
+        <div className="Controls-inputContainer">
+          <label>FONT</label>
+          <input
+            type="range"
+            name="fontSize"
+            value={fontSize}
+            min={50}
+            max={500}
+            onChange={setRange}
+          />
+        </div>
       </div>
     </div>
   );
