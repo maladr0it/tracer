@@ -27,7 +27,7 @@ export const TextCanvas = () => {
         <Rect
           height={height}
           width={width}
-          stroke="black"
+          stroke="fuchsia"
           strokeWidth={BORDER_WIDTH}
         />
         <Text
