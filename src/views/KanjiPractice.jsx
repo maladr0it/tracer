@@ -11,20 +11,23 @@ import Iku from "../assets/Kanji/iku-6.png";
 import Chuu from "../assets/Kanji/chuu-4.png";
 import { Home } from "../components/Home";
 
-const IMAGES = [Nichi, Dai, Hon, Iku, Chuu];
+import StrokeOrder from "./StrokeOrder.jsx";
 
-const CHAR_MAP = {
-  Nichi: "日",
-  Dai: "大",
-  Hon: "本",
-  Iku: "行",
-  Chu: "中"
-};
+// const IMAGES = [Nichi, Dai, Hon, Iku, Chuu];
+
+// const CHAR_MAP = {
+//   Nichi: "日",
+//   Dai: "大",
+//   Hon: "本",
+//   Iku: "行",
+//   Chu: "中"
+// };
 
 export const KanjiPractice = () => {
   return (
     <Home>
-      <div className="KanjiPractice-list">
+      <StrokeOrder />
+      {/* <div className="KanjiPractice-list">
         {IMAGES.map(image => (
           <img
             className="KanjiPractice-image"
@@ -35,7 +38,7 @@ export const KanjiPractice = () => {
       </div>
       <Link to="/" className="KanjiPractice-backButton">
         <FontAwesomeIcon icon={faAngleLeft} size="3x" />
-      </Link>
+      </Link> */}
     </Home>
   );
 };
