@@ -3,7 +3,7 @@ import { Stage, Layer, Text, Rect } from 'react-konva';
 
 import { useImageContext } from '../ImageContext/ImageContext';
 
-const BORDER_WIDTH = 4;
+const BORDER_WIDTH = 25;
 const TEXT_MARGIN = 10;
 
 export const TextCanvas = () => {
@@ -27,7 +27,7 @@ export const TextCanvas = () => {
         <Rect
           height={height}
           width={width}
-          stroke="black"
+          stroke="fuchsia"
           strokeWidth={BORDER_WIDTH}
         />
         <Text
@@ -38,6 +38,7 @@ export const TextCanvas = () => {
           height={height - 2 * TEXT_MARGIN}
           text={text}
           opacity={0.3}
+          fontFamily="azuki"
         />
       </Layer>
     </Stage>

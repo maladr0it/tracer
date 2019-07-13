@@ -9,27 +9,41 @@ import Dai from "../assets/Kanji/dai-3.png";
 import Hon from "../assets/Kanji/hon-5.png";
 import Iku from "../assets/Kanji/iku-6.png";
 import Chuu from "../assets/Kanji/chuu-4.png";
+import { useImageContext } from "../ImageContext/ImageContext";
 import { Home } from "../components/Home";
 
 const IMAGES = [Nichi, Dai, Hon, Iku, Chuu];
+const IMAGE_NAMES = ["日", "大", "本", "行", "中"];
 
-const CHAR_MAP = {
-  Nichi: "日",
-  Dai: "大",
-  Hon: "本",
-  Iku: "行",
-  Chu: "中"
-};
+export const KanjiPractice = ({ history }) => {
+  const { dispatch } = useImageContext();
 
-export const KanjiPractice = () => {
+  const handleSelect = imageIndex => {
+    const text = IMAGE_NAMES[imageIndex];
+
+    dispatch({
+      type: "TEXT_UPDATED",
+      text
+    });
+    // make sufficiently large, it is practice
+    // dispatch({
+    //   type: "CANVAS_UPDATED",
+    //   property: "fontSize",
+    //   value: 500
+    // });
+    history.push("/camera");
+  };
+
   return (
     <Home>
       <div className="KanjiPractice-list">
-        {IMAGES.map(image => (
+        {IMAGES.map((image, i) => (
           <img
+            key={i}
             className="KanjiPractice-image"
             src={image}
             alt="kanji-character"
+            onClick={() => handleSelect(i)}
           />
         ))}
       </div>

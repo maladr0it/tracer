@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'azuki';
+  src: url('/azuki.ttf') format('truetype');
+}
+body {
+  font-family: 'azuki';
+}
+
 .App {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: red;
 }

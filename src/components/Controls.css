@@ -1,9 +1,28 @@
+.Controls {
+  background: linear-gradient(180deg, #fc71ff 50%, #b53cff 100%);
+  color: #fff;
+}
+
 .Controls-topBar {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .Controls-closeButton {
   border: none;
   background: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.Controls-inputGroup {
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+.Controls-inputContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
