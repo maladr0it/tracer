@@ -7,8 +7,8 @@ import { Home } from '../components/Home';
 export const Main = () => {
   console.log(penImage);
   return (
-    <Home>
-      <div className="Main" style={{ backgroundImage: `url(${penImage})` }}>
+    <Home className="Home-Main" style={{ backgroundImage: `url(${penImage})` }}>
+      <div className="Main">
         <Link className="Main-button" to="/editor">
           文章の練習
         </Link>
