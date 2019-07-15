@@ -1,7 +1,19 @@
+.MessageInput {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: Roboto;
+}
+
 .MessageInput-title {
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
   color: #757575;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.fa-pencil-alt {
+  margin-right: 1rem;
 }
 
 .MessageInput-form {
@@ -12,16 +24,23 @@
 
 .MessageInput-textarea {
   flex: 1;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  border: 2px solid #fff;
   border-radius: 4px;
+  border: 2px solid #c7c7c7;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   background: none;
   font-family: azuki;
   resize: none;
+  color: #757575;
+}
+
+.MessageInput-textarea::placeholder {
+  color: #c7c7c7;
 }
 
 .MessageInput-buttonBar {
+  margin: 1rem;
   display: flex;
 }
 
@@ -34,15 +53,27 @@
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
-  background-color: #fff;
-  color: #b53cff;
+  padding: 0.5rem 1rem;
+  background-color: #b53cff;
+  color: #fff;
   border-radius: 4px;
 }
 
 .MessageInput-startButton {
-  border: none;
-  font-size: 2rem;
-  background-color: #fff;
-  color: #b53cff;
   border-radius: 4px;
+  border: 1px solid #b53cff;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: #b53cff;
+  color: #fff;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.MessageInput-textarea:focus,
+.MessageInput-startButton:focus,
+.MessageInput-backButton:focus {
+  box-shadow: 0 0 5px 2px #fc71ff;
+  border: 1px solid #b53cff;
+  outline: none;
 }

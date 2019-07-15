@@ -10,6 +10,10 @@
   left: 1rem;
 }
 
+.Camera-backButton .fa-angle-left {
+  margin-right: 0.1rem;
+}
+
 .Camera-controlsButton {
   bottom: 1rem;
   right: 1rem;

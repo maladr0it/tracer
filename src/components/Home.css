@@ -2,21 +2,21 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  background: linear-gradient(180deg, #fc71ff 57.29%, #b53cff 100%);
 }
 
 .Home-title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0.4em 0;
-  color: #fff;
+  color: #fc71ff;
+  padding: 0 1rem;
+  white-space: pre;
 }
 
 .Home-tagline {
   text-align: center;
   font-size: 2rem;
-  color: #fed2ff;
+  color: #ffc0ea;
   margin: 0;
 }
 

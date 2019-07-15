@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPencilAlt, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
-import "./MessageInput.css";
-import { useImageContext } from "../ImageContext/ImageContext";
-import { Home } from "../components/Home";
+import './MessageInput.css';
+import { useImageContext } from '../ImageContext/ImageContext';
 
 export const MessageInput = ({ history }) => {
   const [value, setValue] = useState(null);
@@ -13,15 +12,15 @@ export const MessageInput = ({ history }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    history.push("/camera");
+    history.push('/camera');
     dispatch({
-      type: "TEXT_UPDATED",
+      type: 'TEXT_UPDATED',
       text: value === null ? state.text : value
     });
   };
 
   return (
-    <Home>
+    <div className="MessageInput">
       <h2 className="MessageInput-title">
         <FontAwesomeIcon icon={faPencilAlt} />
         希望な文章を入力ください
@@ -36,11 +35,13 @@ export const MessageInput = ({ history }) => {
         />
         <div className="MessageInput-buttonBar">
           <Link className="MessageInput-backButton" to="/">
-            <FontAwesomeIcon icon={faAngleLeft} size="3x" />
+            <FontAwesomeIcon icon={faAngleLeft} size="2x" />
           </Link>
-          <button className="MessageInput-startButton">スタート</button>
+          <button type="submit" className="MessageInput-startButton">
+            スタート
+          </button>
         </div>
       </form>
-    </Home>
+    </div>
   );
 };

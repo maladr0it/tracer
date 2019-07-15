@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import "./App.css";
-import { Main } from "./views/Main";
-import { MessageInput } from "./views/MessageInput";
-import { Camera } from "./views/Camera";
-import { ImageContextProvider } from "./ImageContext/ImageContext";
-import { KanjiPractice } from "./views/KanjiPractice";
-import { Viewfinder } from "./views/Viewfinder";
+import './App.css';
+import { Main } from './views/Main';
+import { MessageInput } from './views/MessageInput';
+import { Camera } from './views/Camera';
+import { ImageContextProvider } from './ImageContext/ImageContext';
+import { KanjiPractice } from './views/KanjiPractice';
+import { Viewfinder } from './views/Viewfinder';
 
 const App = () => {
   return (

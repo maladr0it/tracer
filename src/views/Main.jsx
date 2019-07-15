@@ -1,18 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-import "./Main.css";
-import { Home } from "../components/Home";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import penImage from '../assets/penImage.svg';
+import './Main.css';
+import { Home } from '../components/Home';
 
 export const Main = () => {
+  console.log(penImage);
   return (
     <Home>
-      <div className="Main">
+      <div className="Main" style={{ backgroundImage: `url(${penImage})` }}>
         <Link className="Main-button" to="/editor">
-          エディター
+          文章の練習
         </Link>
         <Link className="Main-button" to="/kanji">
-          漢字練習
+          書き順の練習
         </Link>
       </div>
     </Home>

@@ -3,7 +3,13 @@
   src: url('/azuki.ttf') format('truetype');
 }
 body {
-  font-family: 'azuki';
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .App {
